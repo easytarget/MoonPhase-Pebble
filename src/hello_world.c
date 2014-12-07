@@ -37,9 +37,7 @@ static void main_window_load(Window *window) {
 	// Set the color, text, font, and text alignment
   text_layer_set_text_color(s_text_layer, GColorWhite);
   text_layer_set_background_color(s_text_layer, GColorClear);
-	text_layer_set_text(s_text_layer, "Nigel!\n:-)");
-	//text_layer_set_text(s_text_layer, "Greetings\nFrom\nOwen! :-)");
-	// no cat emoji text_layer_set_text(s_text_layer, "Greetings\nFrom\nOwen! \xF0\x9F\x98\xBA");
+	text_layer_set_text(s_text_layer, "Greetings\nFrom\nOwen! :-)");
 	text_layer_set_font(s_text_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28));
 	text_layer_set_text_alignment(s_text_layer, GTextAlignmentLeft);
   
