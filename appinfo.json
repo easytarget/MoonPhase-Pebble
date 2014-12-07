@@ -1,0 +1,19 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "pebble@easytarget.me.uk",
+    "longName": "Hello To The World From Owen",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "shortName": "YoWorld",
+    "uuid": "0a4c1410-7e22-4af7-8272-b0690f118ab0",
+    "versionCode": 1,
+    "versionLabel": "0.9",
+    "watchapp": {
+        "watchface": true
+    }
+}
