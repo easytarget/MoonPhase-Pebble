@@ -1,7 +1,9 @@
 #include <pebble.h>
 
 static Window *s_window;
-static TextLayer *s_text_layer;
+static BitmapLayer *s_moon_layer;
+static GBitmap *s_moon_bitmap;
+//static TextLayer *s_text_layer;
 static TextLayer *s_time_layer;
 
 static void update_time() {
@@ -30,25 +32,31 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 }
 
 static void main_window_load(Window *window) {
+  // Graphics layer for the background
+  s_moon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_MOON_FULL);
+  s_moon_layer = bitmap_layer_create(GRect(0, 0, 144, 144));
+  bitmap_layer_set_bitmap(s_moon_layer, s_moon_bitmap);
+  layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_moon_layer));
+  
   // Two text layers, one for static text, one for time
-	s_text_layer = text_layer_create(GRect(25, 10, 100,100));
-	s_time_layer = text_layer_create(GRect(25, 120, 100,100));
+	//s_text_layer = text_layer_create(GRect(25, 10, 100,100));
+	s_time_layer = text_layer_create(GRect(0, 134, 144, 34));
 	
 	// Set the color, text, font, and text alignment
-  text_layer_set_text_color(s_text_layer, GColorWhite);
-  text_layer_set_background_color(s_text_layer, GColorClear);
-	text_layer_set_text(s_text_layer, "Greetings\nFrom\nOwen! :-)");
-	text_layer_set_font(s_text_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28));
-	text_layer_set_text_alignment(s_text_layer, GTextAlignmentLeft);
+  //text_layer_set_text_color(s_text_layer, GColorBlack);
+  //text_layer_set_background_color(s_text_layer, GColorWhite);
+	//text_layer_set_text(s_text_layer, "Greetings\nFrom\nOwen! :-)");
+	//text_layer_set_font(s_text_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28));
+	//text_layer_set_text_alignment(s_text_layer, GTextAlignmentLeft);
   
   text_layer_set_text_color(s_time_layer, GColorWhite);
-  text_layer_set_background_color(s_time_layer, GColorClear);
+  text_layer_set_background_color(s_time_layer, GColorBlack);
 	text_layer_set_text(s_time_layer, "00:00");
 	text_layer_set_font(s_time_layer, fonts_get_system_font(FONT_KEY_BITHAM_30_BLACK));
 	text_layer_set_text_alignment(s_time_layer, GTextAlignmentCenter);
 	
 	// Add the text layers to the main window
-	layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(s_text_layer));
+	//layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(s_text_layer));
 	layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(s_time_layer));
   
 	// App Logging!
@@ -57,8 +65,11 @@ static void main_window_load(Window *window) {
 
 static void main_window_unload(Window *window) {
 	// Destroy the text layers
-	text_layer_destroy(s_text_layer);
+	//text_layer_destroy(s_text_layer);
 	text_layer_destroy(s_time_layer);
+  // Destroy GBitmap+Layer
+  gbitmap_destroy(s_moon_bitmap);
+  bitmap_layer_destroy(s_moon_layer);
   
 	// App Logging!
 	APP_LOG(APP_LOG_LEVEL_DEBUG, "Unloaded the window");

@@ -7,7 +7,13 @@
     "longName": "Hello To The World From Owen",
     "projectType": "native",
     "resources": {
-        "media": []
+        "media": [
+            {
+                "file": "images/fullmoon.144.png",
+                "name": "MOON_FULL",
+                "type": "png"
+            }
+        ]
     },
     "shortName": "YoWorld",
     "uuid": "0a4c1410-7e22-4af7-8272-b0690f118ab0",
