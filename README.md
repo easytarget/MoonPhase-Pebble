@@ -1,16 +1,14 @@
-Working on a Prototype for a Pebble Face; to show phases of the moon.
+A Pebble Face to show phases of the moon by drawwing a dithered bitmap with the phase masked over that,
 
---
-
-So far a static moon image and a time display.
-
-Plan: 
- Make a second 'no moon' bitmap that gives a very shadowed outline. 
- Work out how to mask the image; and use an inverse mask to draw the shadowed part.
- 
-Ideas:
-+Date/time
-+BT status
-+Message Status
-+Batt Low.
-+Apollo landing sites.
+ToDo:
++Dont redraw Date every minute (select action on clock tick type)
++Maths functions to work phase out
++Way to mask image quickly/efficiently.
++Update to show phase. (check/renew hourly?)
++Animate full phase sequence on activation.
++Opt: Hourly Vibrate?
++Opt: BT status
++Opt: Message Status
++Opt: Batt Low.
++Humm:Apollo landing sites.
+-- Display on anniversaries..?
