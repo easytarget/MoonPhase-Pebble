@@ -4,18 +4,18 @@
         ""
     ],
     "companyName": "pebble@easytarget.me.uk",
-    "longName": "Moon Phase watchface",
+    "longName": "Moon Phase Graphical Watchface",
     "projectType": "native",
     "resources": {
         "media": [
             {
                 "file": "images/fullmoon.neg.28.png",
+                "menuIcon": true,
                 "name": "MOON_ICON_NEG",
                 "type": "png"
             },
             {
                 "file": "images/fullmoon.28.png",
-                "menuIcon": true,
                 "name": "MOON_ICON",
                 "type": "png"
             },
@@ -26,7 +26,7 @@
             }
         ]
     },
-    "shortName": "Moon Face",
+    "shortName": "Moon Phases",
     "uuid": "0a4c1410-7e22-4af7-8272-b0690f118ab0",
     "versionCode": 1,
     "versionLabel": "0.99",
