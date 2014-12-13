@@ -4,21 +4,32 @@
         ""
     ],
     "companyName": "pebble@easytarget.me.uk",
-    "longName": "Hello To The World From Owen",
+    "longName": "Moon Phase watchface",
     "projectType": "native",
     "resources": {
         "media": [
             {
-                "file": "images/fullmoon.144.png",
+                "file": "images/fullmoon.neg.28.png",
+                "name": "MOON_ICON_NEG",
+                "type": "png"
+            },
+            {
+                "file": "images/fullmoon.28.png",
+                "menuIcon": true,
+                "name": "MOON_ICON",
+                "type": "png"
+            },
+            {
+                "file": "images/fullmoon.140.png",
                 "name": "MOON_FULL",
                 "type": "png"
             }
         ]
     },
-    "shortName": "YoWorld",
+    "shortName": "Moon Face",
     "uuid": "0a4c1410-7e22-4af7-8272-b0690f118ab0",
     "versionCode": 1,
-    "versionLabel": "0.9",
+    "versionLabel": "0.99",
     "watchapp": {
         "watchface": true
     }
