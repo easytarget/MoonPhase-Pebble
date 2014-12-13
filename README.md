@@ -1,4 +1,4 @@
-A Pebble Face to show phases of the moon by drawwing a dithered bitmap with the phase masked over that,
+A Pebble Face to show phases of the moon by drawing a dithered bitmap with the phase masked over that,
 
 ToDo:
 +Dont redraw Date every minute (select action on clock tick type)
