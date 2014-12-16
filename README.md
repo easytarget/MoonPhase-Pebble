@@ -12,3 +12,5 @@ ToDo:
 +Opt: Batt Low.
 +Humm:Apollo landing sites.
 -- Display on anniversaries..?
+
+Useful Lib: http://www.fourmilab.ch/moontool/moontool.shar.gz
